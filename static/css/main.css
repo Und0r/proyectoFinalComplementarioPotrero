@@ -1,0 +1,85 @@
+.navbar-collapse {
+  flex-grow: 0;
+}
+
+.btn {
+  margin-top: 5px;
+}
+
+body {
+  background-image: url(.././img/images.jpg);
+  background-size: cover;
+  color: black;
+}
+
+main {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.contacto {
+  background-color: rgba(44, 17, 17, 0.575);
+  padding: 10px;
+  color: azure;
+}
+
+.card-deck {
+  display: flex;
+  flex-direction: row;
+}
+
+.card {
+  margin: 20px;
+  color: black;
+}
+
+.card-img-top {
+  height: 200px;
+}
+
+.container {
+  color: azure;
+}
+
+#descripcion-container {
+  background-color: rgb(29, 28, 28, 0.5);
+}
+
+.python > p {
+  color: azure;
+}
+
+.headerh2 {
+  background-color: rgb(29, 28, 28, 0.5);
+}
+
+.accordion-body {
+  color: azure;
+}
+
+.acordionbut {
+  background-color: rgba(66, 18, 18, 0.5);
+  color: azure;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: rgba(48, 13, 13, 0.808);
+  color: aliceblue;
+}
+
+.card-deck {
+  margin-top: 20px;
+  padding: 20px;
+  margin: 20px;
+}
+
+.carrusel {
+  margin-top: 50px;
+  max-width: 1050px;
+}
+.info {
+  background-color: rgb(29, 28, 28, 0.5);
+}
+
+.pinfo {
+  font-size: x-large;
+}

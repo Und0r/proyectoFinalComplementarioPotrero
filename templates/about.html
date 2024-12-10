@@ -1,0 +1,64 @@
+{% extends "layout.html" %} {% block content %}
+<div class="accordion" id="accordionPanelsStayOpenExample">
+  <div class="accordion-item headerh2">
+    <h2 class="accordion-header">
+      <button
+        class="accordion-button acordionbut"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#panelsStayOpen-collapseOne"
+        aria-expanded="true"
+        aria-controls="panelsStayOpen-collapseOne"
+      >
+        Mision
+      </button>
+    </h2>
+    <div
+      id="panelsStayOpen-collapseOne"
+      class="accordion-collapse collapse show"
+    >
+      <div class="accordion-body">
+       <p>Nuestra mision es lograr que nuestros alumnos salgan con todas la herramientas listos para el mundo laboral.</p>
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item headerh2">
+    <h2 class="accordion-header">
+      <button
+        class="accordion-button acordionbut collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#panelsStayOpen-collapseTwo"
+        aria-expanded="false"
+        aria-controls="panelsStayOpen-collapseTwo"
+      >
+        Objetivo
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+      <div class="accordion-body">
+       <p>Ser una academia que cumpla con los estandares de la educacion y la programación.</p>
+      </div>
+    </div>
+  </div>
+  <div class="accordion-item headerh2">
+    <h2 class="accordion-header">
+      <button
+        class="accordion-button acordionbut collapsed"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#panelsStayOpen-collapseThree"
+        aria-expanded="false"
+        aria-controls="panelsStayOpen-collapseThree"
+      >
+       Historia
+      </button>
+    </h2>
+    <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+      <div class="accordion-body">
+       <p>Nuestra historia comienza a principios del 2020, luego de unos años trabajando en el rubro, decidimos que teniamos que devolver ese conocomiento que alguna vez nos enseñaron.</p>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock%}

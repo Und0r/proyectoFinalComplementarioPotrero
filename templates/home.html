@@ -1,0 +1,98 @@
+{% extends "layout.html" %} {% block content %}
+
+<div class="container text-center info">
+  <h1>Bienvenido a AleWeb Cursos</h1>
+  <img src="../static/img/logo.png" />
+
+  <p class="pinfo">
+    Aqui te formaras como desarrollador, ofrenciendote cursos de alta calidad y
+    con maestros llenos de experiencias. Recorre la pagina y enterate de todos
+    los cursos que tenemos.
+  </p>
+</div>
+
+<div class="container carrusel">
+  <div id="carouselExampleIndicators" class="carousel slide carousel-dark">
+    <div class="carousel-indicators">
+      <button
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide-to="0"
+        class="active"
+        aria-current="true"
+        aria-label="Slide 1"
+      ></button>
+      <button
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide-to="1"
+        aria-label="Slide 2"
+      ></button>
+      <button
+        type="button"
+        data-bs-target="#carouselExampleIndicators"
+        data-bs-slide-to="2"
+        aria-label="Slide 3"
+      ></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <a href="{{ url_for('cursos') }}">
+          <img
+            src="../static/img/backend.jpg"
+            class="d-block w-100"
+            alt="backend"
+        /></a>
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Back End Developer</h5>
+          <p>Conoce todo lo que sucede detras de las paginas.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <a href="{{ url_for('cursos') }}">
+          <img
+            src="../static/img/frontend.jpg"
+            class="d-block w-100"
+            alt="fronted"
+        /></a>
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Front End Developer</h5>
+          <p>Saca el diseñador que tenes dentro tuyo.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <a href="{{ url_for('cursos') }}">
+          <img
+            src="../static/img/python.jpg"
+            class="d-block w-100"
+            alt="python"
+          />
+        </a>
+        <div class="carousel-caption d-none d-md-block python">
+          <h5>Python Developer</h5>
+          <p>Si te gusta resolver problemas, este es tu curso.</p>
+        </div>
+      </div>
+    </div>
+    <button
+      class="carousel-control-prev"
+      type="button"
+      data-bs-target="#carouselExampleIndicators"
+      data-bs-slide="prev"
+    >
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button
+      class="carousel-control-next"
+      type="button"
+      data-bs-target="#carouselExampleIndicators"
+      data-bs-slide="next"
+    >
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</div>
+
+{% endblock%}

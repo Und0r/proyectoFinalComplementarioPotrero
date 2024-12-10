@@ -1,0 +1,66 @@
+{% extends "layout.html" %} {% block content %}
+<div class="container detalle">
+  <div class="card-deck" id="card-deck"></div>
+</div>
+
+<script>
+  function obtenerDatos() {
+    fetch("https://cursos-1d660-default-rtdb.firebaseio.com/cursos.json")
+      .then((response) => response.json())
+      .then((data) => {
+        const cardDeck = document.getElementById("card-deck");
+        cardDeck.innerHTML = "";
+
+        for (let key in data) {
+          const objeto = data[key];
+
+          const card = document.createElement("div");
+          card.classList.add("card");
+
+          const imagen = document.createElement("img");
+          imagen.classList.add("card-img-top");
+          imagen.src = objeto.imagen;
+
+          const cardBody = document.createElement("div");
+          cardBody.classList.add("card-body");
+
+          const titulo = document.createElement("h5");
+          titulo.classList.add("card-title");
+          titulo.textContent = objeto["nombrecurso"];
+
+          const duracion = document.createElement("p");
+          duracion.classList.add("card-text");
+          duracion.textContent = "Duración: " + objeto.duracion + " horas";
+
+          const valor = document.createElement("p");
+          valor.classList.add("card-text");
+          valor.textContent = "Valor: $" + objeto.Valor;
+
+          const botonDetalle = document.createElement("button");
+          botonDetalle.classList.add("btn", "btn-primary");
+          botonDetalle.textContent = "Detalle";
+
+          botonDetalle.addEventListener("click", function () {
+            const id = key;
+
+            window.location.href = "{{ url_for('detalle') }}?id=" + id;
+          });
+
+          cardBody.appendChild(titulo);
+          cardBody.appendChild(duracion);
+          cardBody.appendChild(valor);
+          cardBody.appendChild(botonDetalle);
+
+          card.appendChild(imagen);
+          card.appendChild(cardBody);
+
+          cardDeck.appendChild(card);
+        }
+      });
+  }
+
+  obtenerDatos();
+
+  setInterval(obtenerDatos, 5000);
+</script>
+{% endblock%}
